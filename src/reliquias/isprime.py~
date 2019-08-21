@@ -1,0 +1,13 @@
+from Factorize import factorize
+
+
+def isprime(n):
+    factors = factorize(n)
+    if len(factors) == 1 and factors[0][1] == 1:
+        return True
+    else:
+        return False
+
+
+if __name__ == '__main__':
+    print(isprime(int(input("Number: "))))

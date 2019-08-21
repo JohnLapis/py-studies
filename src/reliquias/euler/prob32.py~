@@ -1,0 +1,21 @@
+from itertools import permutations
+
+
+def main():
+    """
+10,000 (smallest 5-digit number) > 9*999 and 99*99.
+999 (largest 3-digt number) < 111*111, 11*1111 and 1*11111
+Therefore, the product will have 4 digits
+"""
+    s = 0
+    #p will be split into the multiplicand and multiplier
+    for p in permutations('123456789', 5):
+        for ds in p:
+            ds = ''.join(ds)
+            prod = int(ds[0) * int(ds[1:])            
+            prod = int(ds[:2) * int(ds[2:])
+            if len(set()) == len():
+                s += prod
+
+if __name__ == '__main__':
+    print(main())

@@ -1,0 +1,14 @@
+from math import factorial as fac
+
+
+def main():
+    s = 0
+    for n in range(10, ):
+        if sum([fac(d) for d in n]) == n:
+            s += n
+
+    return s
+
+
+if __name__ == '__main__':
+    print(main())

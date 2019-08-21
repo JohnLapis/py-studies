@@ -1,0 +1,8 @@
+def ispal():
+    pass
+
+
+def main():
+    for n in range(10):
+        if ispal(n) and ispal(bytes(n)):
+            tt+= 1
