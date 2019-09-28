@@ -16,7 +16,6 @@ def main(limit):
 
         if i == len(p):
             n += 1
-            print(p)
 
     if limit > 10:
         n += 1 #because 11 is an exception

@@ -4,13 +4,12 @@ def main(la,lb):
     for a in range(2,la+1):
         b = 2
         if a in nums:
-            b = int(lb / nums[b]) + 1
+            b = int(lb / nums[a]) + 1
         while b <= lb:
             nums[a**b] = b
-
             b += 1
 
-    return len(nums), nums
+    return len(nums)
 
 
 if __name__ == '__main__':

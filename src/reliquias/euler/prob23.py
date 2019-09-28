@@ -10,7 +10,7 @@ def main():
             abundant_numbers.append(i)
 
     seive = []
-    for i in combinations_with_replacement(abundant_numbers[:50], 2):
+    for i in combinations_with_replacement(abundant_numbers, 2):
         s = sum(i)
         if s > 28123:
             continue
