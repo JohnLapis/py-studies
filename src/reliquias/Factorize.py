@@ -41,9 +41,4 @@ def factorize(N, limit=None, keep_exp=True):
 
 
 if __name__ == '__main__':
-    n = int(input('Number: '))
-    r = factorize(n)
-    print(r)
-
-    from functools import reduce
-    assert reduce(lambda x, y: x*y, map(lambda x: x[0]**x[1], r)) == n
+    print(factorize(int(input('Number: '))))

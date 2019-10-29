@@ -6,7 +6,7 @@ def main():
     abundant_numbers = []
 
     for i in range(1, 28124):
-        if sum([n for n in find_divisors(factorize(i))]) - i > i:
+        if sum([n for n in find_divisors(i)]) - i > i:
             abundant_numbers.append(i)
 
     seive = []

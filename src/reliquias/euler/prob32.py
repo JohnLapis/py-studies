@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def main():
     """
 10,000 (smallest 5-digit number) > 9*999 and 99*99.

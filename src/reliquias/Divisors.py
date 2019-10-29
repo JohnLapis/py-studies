@@ -1,8 +1,10 @@
 from itertools import combinations
 from functools import reduce
+from Factorize import factorize
 
-def find_divisors(factors):
 
+def find_divisors(n):
+    factors = factorize(n)
     divisors = [(f[0],1) for f in factors]
 
     for i in range(2, len(factors)+1):
@@ -25,7 +27,5 @@ def find_divisors(factors):
     return sorted(divisors)
 
 
-if __name__ == '__main__':
-    from Factorize import factorize
-    
-    print(find_divisors(factorize(int(input('here ')))))
+if __name__ == '__main__':  
+    print(find_divisors(int(input('here '))))

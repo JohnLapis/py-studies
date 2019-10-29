@@ -1,6 +1,7 @@
 from sieve_of_erastosthenes import sieve
 from isprime import isprime
 
+
 def main(limit):
     n = 0
     primes = sieve(limit)

@@ -17,5 +17,6 @@ Any number containing a '7' wouldn't be valid since
 
     return sum(total)
 
+
 if __name__ == '__main__':
     print(main())

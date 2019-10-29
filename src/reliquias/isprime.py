@@ -7,14 +7,16 @@ def isprime(n, primes=[]):
         return False
 
     if not primes:
-       primes = sieve(int(sqrt(n))) 
-    
-    for prime in primes:
-        if n % prime == 0 and prime != n:
-            return False
-        if prime > sqrt(n):
-            break
-
+       for prime in sieve(int(sqrt(n))):
+           if n % prime == 0:
+               return False
+    else:
+        for prime in primes:
+            if n % prime == 0:
+                return False
+            if prime > sqrt(n):
+                break
+        
     return True
 
 
