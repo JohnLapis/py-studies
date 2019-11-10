@@ -2,34 +2,24 @@ from math import sqrt
 from itertools import combinations
 
 
-def p(n):
-    return n*(3*n - 1)/2
-
-def ispen(n):
-    try:
-        return (1 + sqrt(1 + 24*n))/2 % 3 == 0
-    except:
-        return False
-
+def ispen(x):
+    return (sqrt(1 + 24*x) + 1) % 6 == 0
 
 def main():
-    l = []
-    o=[]
-    for x in combinations(range(1,1000),2):
-        j = x[0]
-        k = x[1]
-        if ispen(p(j) + p(k)) and  ispen(p(k) - p(j)):
-            l.append([j,k,j-k])
-        if ispen(p(k) - p(j)):
-            o.append([j,k])
-                
-    return l,o
+    """
+    Checking the upper limit isn't feasible in my pc
+    And the first occurence just happens to be the minimum D
+    """
+    d = 0
+    for c in combinations([n*(3*n-1)/2 for n in range(1,10001)], 2):
+        if c[0] == pj:
+            continue
+        if ispen(c[0] + c[1]) and ispen(c[1] - c[0]):
+            if d == 0 or c[1] - c[0] < d:
+                d = c[1]-c[0]
+        
+    return d
 
 
 if __name__ == '__main__':
-    l,o = main()
-    for i in l:
-        print(i,'aaaa')
-    a=input()
-    for i in o:
-        print(i)
+    print(main())
