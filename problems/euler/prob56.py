@@ -1,9 +1,9 @@
 def main():
     g = 0
-    for a in range(99,10,-1):
+    for a in range(50,100):
         if a % 10 == 0:
             continue
-        for b in range(99,10,-1):
+        for b in range(90,100):
             if b % 10 == 0:
                 continue
             s = sum([int(d) for d in str(a**b)])
